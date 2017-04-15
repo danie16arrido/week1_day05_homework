@@ -99,7 +99,13 @@ class TestPetShop < Minitest::Test
     cash = total_cash(@pet_shop)
     assert_equal(1000, cash)
   end
-  
+
+  def test_add_or_remove_cash_alpha_no_change
+    add_or_remove_cash(@pet_shop,"a")
+    cash = total_cash(@pet_shop)
+    assert_equal(1000, cash)
+  end
+
   def test_pets_sold
     sold = pets_sold(@pet_shop)
     assert_equal(0, sold)
