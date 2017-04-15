@@ -13,3 +13,8 @@ def add_or_remove_cash(pet_shop, amount)
     return nil
   end
 end
+
+def pets_sold(pet_shop)
+  pets_sold_by_shop = pet_shop[:admin][:pets_sold]
+  return (pets_sold_by_shop < 0) ? nil : pets_sold_by_shop
+end
