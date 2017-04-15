@@ -40,3 +40,9 @@ def find_pet_by_name(pet_shop, name)
   #return nil if no ped with "name" is found
   return nil
 end
+
+def remove_pet_by_name(pet_shop, name)
+  all_pets = pet_shop[:pets]
+  all_pets.delete_if { |pet| pet[:name] == name }
+  return nil
+end
