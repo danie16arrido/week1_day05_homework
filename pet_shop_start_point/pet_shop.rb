@@ -33,3 +33,10 @@ def pets_by_breed(pet_shop, breed)
   same_breed = all_pets.keep_if { |pet| pet[:breed] == breed }
   return same_breed ? same_breed : nil
 end
+
+def find_pet_by_name(pet_shop, name)
+  all_pets = pet_shop[:pets]
+  all_pets.each { |pet| return pet if pet[:name] ==  name }
+  #return nil if no ped with "name" is found
+  return nil
+end
