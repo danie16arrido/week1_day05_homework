@@ -27,3 +27,9 @@ end
 def stock_count(pet_shop)
   return pet_shop[:pets].length()
 end
+
+def pets_by_breed(pet_shop, breed)
+  all_pets = pet_shop[:pets]
+  same_breed = all_pets.keep_if { |pet| pet[:breed] == breed }
+  return same_breed ? same_breed : nil
+end
