@@ -18,3 +18,8 @@ def pets_sold(pet_shop)
   pets_sold_by_shop = pet_shop[:admin][:pets_sold]
   return (pets_sold_by_shop < 0) ? nil : pets_sold_by_shop
 end
+
+def increase_pets_sold(pet_shop, number_of_pets)
+  pet_shop[:admin][:pets_sold] += number_of_pets
+  return nil
+end
